@@ -6,18 +6,27 @@ const onGenerateSubmit = (e) => {
 
     clearUI();
 
-    const url = document.getElementById('url').value;
+    const name = document.getElementById('name').value;
     const size = document.getElementById('size').value;
+    const linkedin = document.getElementById('linkedin').value;
+    const github = document.getElementById('github').value;
 
-    if (url === '') {
+    const data = {
+        name: name,
+        linkedin_url: linkedin,
+        github_url: github
+    }
+
+    if (name === '') {
         alert('Please enter a user name');
     } else {
+        insertData(data);
         showSpinner();
 
         setTimeout(() => {
             hideSpinner();
 
-            generateQRCode(url, size);
+            generateQRCode(name, size);
 
             setTimeout(() => {
                 const saveUrl = qr.querySelector('img').src;
@@ -27,9 +36,9 @@ const onGenerateSubmit = (e) => {
     };
 };
 
-const generateQRCode = (url, size) => {
+const generateQRCode = (name, size) => {
     const qrcode = new QRCode('qrcode', {
-        text: url,
+        text: name,
         width: size,
         height: size
     });
@@ -63,4 +72,3 @@ const createSaveBtn = (saveUrl) => {
 hideSpinner();
 
 form.addEventListener('submit', onGenerateSubmit);
-
