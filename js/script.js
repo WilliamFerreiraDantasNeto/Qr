@@ -10,6 +10,7 @@ const onGenerateSubmit = (e) => {
     const size = document.getElementById('size').value;
     const linkedin = document.getElementById('linkedin').value;
     const github = document.getElementById('github').value;
+    const url = "http://127.0.0.1:5500/Perfil.html?name=" + name;
 
     const data = {
         name: name,
@@ -26,7 +27,7 @@ const onGenerateSubmit = (e) => {
         setTimeout(() => {
             hideSpinner();
 
-            generateQRCode(name, size);
+            generateQRCode(url, size);
 
             setTimeout(() => {
                 const saveUrl = qr.querySelector('img').src;
@@ -36,9 +37,9 @@ const onGenerateSubmit = (e) => {
     };
 };
 
-const generateQRCode = (name, size) => {
+const generateQRCode = (url, size) => {
     const qrcode = new QRCode('qrcode', {
-        text: name,
+        text: url,
         width: size,
         height: size
     });
@@ -72,3 +73,15 @@ const createSaveBtn = (saveUrl) => {
 hideSpinner();
 
 form.addEventListener('submit', onGenerateSubmit);
+
+async function insertData(data) {
+
+    const {error} = await _supabase.from("users").insert([data]);
+    
+    if (error) {
+        console.log(error);
+        return;
+    } else {
+        console.log("Dados salvos com sucessor!");
+    }
+}

@@ -3,7 +3,7 @@ const socialMedia = document.getElementById('socialMedia');
 const github = document.getElementById('github');
 
 async function loadData(name) {
-    const {data, error} = await _supabase.from("users").select().eq('name', "William");
+    const {data, error} = await _supabase.from("users").select().eq('name', name);
 
     console.log(data)
 
@@ -28,33 +28,8 @@ async function loadData(name) {
 
 }
 
+const urlParams = new URLSearchParams(window.location.search);
 
+const nomeParam = urlParams.get("name")
 
-async function insertData(data) {
-
-    const {error} = await _supabase.from("users").insert([data]);
-    
-    if (error) {
-        console.log(error);
-        return;
-    } else {
-        console.log("Dados salvos com sucessor!");
-    }
-}
-
-loadData()
-
-const nome = () => {
-    
-};
-
-
-const createSaveBtn = (saveUrl) => {
-    const link = document.createElement('a');
-    
-    
-    
-    
-    
-    
-};
+loadData(nomeParam)
