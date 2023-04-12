@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/cliente.js"></script>
+    <script src="js/aplicacao.js" defer></script>
+    <title>Perfil</title>
+  </head>
+  <body>
+    <header class="bg-blue-500 p-4 mb-10 text-center">
+      <div class="max-w-5xl m-auto">
+        <div id="titulo" class="text-xl font-bold align-center text-white">
+          Hello, my name is
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="flex flex-col-reverse align-center justify-center p-10 m-auto md:max-w-4xl md:flex-row">
+        <div class="w-full md:w-2/3 mr-24">
+          <h1 class="text-3xl font-folb mab-5 md:text-4xl">
+            My History
+          </h1>
+          <p class="mb-8 mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, repellendus quasi. Debitis quaerat laborum adipisci, consequatur explicabo nihil. Cumque dolorem doloribus totam facilis quidem itaque laudantium quis deleniti quod? Facilis.
+          </p>
+          
+          <div id="socialMedia" class="p-4 mb-10 text-center">
+            
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
