@@ -10,13 +10,13 @@ link do projeto
 
 ## Layout mobile
 
-![imagem](/img/QR mobileView.png)
+![imagem](img/QRmobileView.png)
 
 
 
 ## Layout web
 
-prints comas imagens
+![imagem](img/QRwebView.png)
 
 
 ## Modelo conceitual
