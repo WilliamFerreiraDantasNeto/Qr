@@ -44,7 +44,7 @@ Obs. Se a aplicação estiver em um local host o aparelho que fara a leitura dev
 
 William Ferreira Dantas Neto
 
-linkedin.com/in/william-ferreira-dantas-neto-7849b8114/
+http://linkedin.com/in/william-ferreira-dantas-neto-7849b8114/
 
 https://github.com/WilliamFerreiraDantasNeto
 
