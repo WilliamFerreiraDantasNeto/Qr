@@ -10,7 +10,7 @@ link do projeto
 
 ## Layout mobile
 
-prints comas imagens
+![imagem](/img/QR mobileView.png)
 
 
 
